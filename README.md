@@ -14,8 +14,12 @@ We have developed a web application that tracks the space station in 3-dimention
 3. Another awesome feature is that we are streaming of real footage from the ISS that we had embedded from a youtube live stream 
 4. And last but not the least is that we have the names of the astronauts that are in the ISS right now .
 
-
 ##### This is not the end we are still building the application and will be adding more features 
+
+#### How to use this WebApp
+1. Download the code as zip file 
+2. Extract the zip file in desired directory
+3. Run the index.html file in the code
 
 ##### Video Demo : 
 
