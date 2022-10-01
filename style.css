@@ -1,0 +1,22 @@
+body{
+    background-image: src();
+}
+.canvasContainer{
+    margin-top: 15px;
+    text-align: center;
+    padding: 5px 5px;
+
+}
+
+#videoISS{
+    margin: auto;
+}
+
+#embeddedVideoContainer{
+    margin-top: 40px;
+}
+#videoContainerHeading{
+    text-align: center;
+    text-decoration: solid;
+    margin-bottom: 40px;
+}
