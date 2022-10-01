@@ -7,10 +7,11 @@
 ### Challenge name : Track the Space Station in 3D
 
 #### Small Summary :
-We have developed a web application that tracks the space station in 3-dimentions and it have some awesome features to name a few :
+We have developed a web application that tracks the space station in 3-dimentions and it have some awesome features.
+##### To name a few :
 1. We are able to track the International Space Station in 3D
-2. we have a dashboard that shows the current position (i.e. the current latitude and current longitude of the ISS) and also its current speed
-3. Another awesome feature is the we  have preview of real footage from the ISS that we are embedding from a youtube live stream 
+2. We have a dashboard that shows the current position (i.e. the current latitude and current longitude of the ISS) and also its current speed
+3. Another awesome feature is that we are streaming of real footage from the ISS that we had embedded from a youtube live stream 
 4. And last but not the least is that we have the names of the astronauts that are in the ISS right now .
 
 
