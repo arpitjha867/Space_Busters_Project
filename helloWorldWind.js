@@ -113,11 +113,14 @@ async function getData(){
     let data = await fetch(url)
     let issData = await data.json()
     console.log(issData)
-    // collodaLoader(issData.iss_position.latitude,issData.iss_position.longitude)
+    collodaLoader(issData.iss_position.latitude,issData.iss_position.longitude)
     latitudeShow.innerHTML=issData.iss_position.latitude
     longitudeShow.innerHTML=issData.iss_position.longitude
 
 }
+setInterval(() => {
+    getData()
+}, 500);
 
 
 
