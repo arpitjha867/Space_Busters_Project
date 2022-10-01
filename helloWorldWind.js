@@ -94,7 +94,7 @@ console.log(config)
 
 
 function collodaLoader(latitude,longitude){
-    const colladaLoader = new WorldWind.ColladaLoader(new WorldWind.Position(latitude, longitude, 8000.0), config);
+    const colladaLoader = new WorldWind.ColladaLoader(new WorldWind.Position(latitude, longitude, 80000.0), config);
     colladaLoader.load("", function (colladaModel) {
         colladaModel.scale = 50000;
         modelLayer.addRenderable(colladaModel);
@@ -112,8 +112,8 @@ async function getData(){
     let url = 'http://api.open-notify.org/iss-now.json'
     let data = await fetch(url)
     let issData = await data.json()
-    console.log(issData)
-    collodaLoader(issData.iss_position.latitude,issData.iss_position.longitude)
+    // console.log(issData)
+    // collodaLoader(issData.iss_position.latitude,issData.iss_position.longitude)
     latitudeShow.innerHTML=issData.iss_position.latitude
     longitudeShow.innerHTML=issData.iss_position.longitude
 
@@ -143,3 +143,22 @@ var logError = function (jqXhr, text, exception) {
 };
 
 // $.get(serviceAddress).done(createLayer).fail(logError);
+
+
+// getting the astronaut data
+
+
+
+async function getAstroData(){
+
+    let astonautDataAPI = "http://api.open-notify.org/astros.json"
+    let astroData= await fetch(astonautDataAPI)
+    let finalData = await astroData.json()
+    let astronautFinalData = finalData.people
+    let peopleInSpace = document.getElementById('peopleInSpace')
+    astronautFinalData.forEach((element)=>{
+        peopleInSpace.innerHTML+=`<div class=" text-white "><span class="badge bg-secondary fs-4 mt-2">${element.name}</span></div>`
+    })
+}
+
+getAstroData();

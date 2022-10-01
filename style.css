@@ -1,3 +1,9 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&family=Roboto+Condensed:wght@300;400;700&display=swap');
+
 body{
     background-image: url("https://images.unsplash.com/photo-1542228846-2d791a09d7d1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80");
 }
@@ -26,10 +32,45 @@ h1{
 }
 
 .dataDisplay{
+    border: 1px solid white;
+    border-radius: 5px;
+    width: 451px;
     margin-top: 20px;
     text-align: center;
     color: white;
     display: flex;
     justify-content: center;
     font-size: 30px;
+}
+.dashboardBorder{
+    border-radius: 5px;
+}
+.peopleInSpace{
+    border: 1px solid white;
+    border-radius: 5px;
+}
+
+@layer base{
+    body{
+        @apply font-[Poppins]
+    }
+    li{
+       @apply p-4 
+    }
+    h1{
+        @apply text-3xl md:text-4xl font-bold
+    }
+    h2{
+        @apply text-3xl font-bold
+    }
+    h3{
+        @apply text-xl font-bold
+    }
+    button{
+        @apply p-3 border bg-gradient-to-r from-[var(--primary-dark)] to-[var(--primary-light)] text-white rounded-md
+    }
+    .icon{
+        @apply text-2xl cursor-pointer TextTransition
+    }
+
 }
